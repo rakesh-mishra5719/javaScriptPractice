@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-02</title>
+</head>
+
+<body>
+    <p>Enter degree celsius and click change button</p>
+    <input type="text" name="" id="cid" placeholder="celsius">
+    <button onclick="change1()" id="fbtn">Fahranheit</button>
+
+
+    <p>Enter degree fahranheit and click change button</p>
+    <input type="text" name="" id="fid" placeholder="Fahranheit">
+    <button onclick="change2()" id="cbtn">Celsius</button>
+    <script>
+
+
+        function change1() {
+                let text = document.getElementById('cid');
+                var c = text.value;
+                let f = (c * 9 / 5) + 32;
+                alert(` Fahrenheit = ${f}`);
+                text.value = '';
+            }
+            function change2(){
+                let text = document.getElementById('fid');
+                let f = text.value;
+                let c = (f-32 ) * 5 / 9;
+                alert(` Celsius = ${c}`);
+                text.value = '';
+            }
+        
+    </script>
+</body>
+
+</html>
