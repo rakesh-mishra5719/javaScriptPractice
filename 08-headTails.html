@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-head-tails</title>
+</head>
+
+<body>
+    <p>Guess the side of coin</p>
+    <button onclick="
+        playGame('Heads')
+        "> Heads </button>
+    <button onclick="
+    playGame('Tails')
+    "> Tails </button>
+    <button onclick=" 
+    score.wins = 0;
+    score.loses = 0;
+    localStorage.removeItem('HTscore');
+    "> Reset</button>
+
+
+    <script>
+        let score = JSON.parse(localStorage.getItem('HTscore')) ;
+
+        if (!score) {
+            score = {
+                wins: 0,
+                loses: 0,
+               
+            };
+        }
+
+        let obj = {
+            one:1,
+            two:2
+        }
+        console.log(obj)
+        
+        function playGame(guess){
+            let result = '';
+            let number = Math.random();
+            let side = '';
+
+        if(number > 0 && number < 0.5){
+            side = 'Heads';
+        }else if(number >= 0.5 && number < 1){
+            side = 'Tails';
+        }
+        result  = (guess === side)? 'You win':'You lose';
+
+        if(result === 'You win'){
+            score.wins += 1;
+        }else if(result === 'You lose'){
+            score.loses += 1;
+        }
+
+        localStorage.setItem('HTscore', JSON.stringify(score));
+        let store = JSON.parse(localStorage.getItem('HTscore'));
+       
+        console.log(store);
+        alert(`You choose ${guess} and ${result} 
+wins: ${score.wins} , loses: ${score.loses}`)
+        }
+
+
+    </script>
+</body>
+
+</html>
