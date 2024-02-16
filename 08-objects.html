@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+
+ 
+
+    <script>
+        /*
+        const product = {
+            name: 'socks',
+            price: 1090
+        };
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'shoes';// this will update the value of the property in objects
+        console.log(product)
+        product.newProperty = true;// this will a new property in object
+        console.log(product)
+
+        delete product.newProperty // this will delete the property from the objects
+        console.log(product)
+*/
+/*
+const product2 = {
+    name: 'shirt',
+    ['delivery-time']: '1 day',
+    rating: {
+        stars: 4.5,
+        count: 87
+    },
+    fun: function funtion1(){
+        console.log('funtion inside object')
+    } // function inside a object is a method
+};
+console.log(product2);
+console.log(product2.name);
+console.log(product2['name']);//other access the property of objects.
+// console.log(product2.delivery-time)// it will gives us error so we have to use square bracket
+console.log(product2['delivery-time']);
+console.log(product2);
+product2.fun();
+
+console.log(typeof console);
+*/
+
+/*
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+    const object1 = {
+        message: 'hello'
+    };
+    const object2 = object1// here we are not copying the object ,we are coping the reference of object
+
+    object1.message = 'good job';
+    console.log(object1)
+    console.log(object2)
+
+
+    const object3 = {
+        message:'good job'
+    };
+
+    console.log(object3 === object1) // we can compare two objects directly; false
+    console.log(object2 === object1)// true;  because objects1 and objects2 are the same references
+
+    const object4 = {
+        message:'good job',
+        price: 799
+    };
+*/
+    // const message =  object4.message;
+    /*
+    const {message , price} = object4; // destucturing
+    console.log(message);
+    console.log(price);
+
+    const object5 = {
+        // message:message
+        message ,//shorthand property
+        method: function funtion1(){
+            console.log('method');
+        },
+        method(){
+            console.log('method');
+        }
+    };
+
+    //shorthand method
+    console.log(object5);
+    object5.method();
+    */
+
+    // exercise 8a, 8b, 8c, 8d,8e;
+/*
+    const product1 = {
+        name: 'basketball',
+        price:2095,
+        'delivery-time': '3days'
+    };
+    const product2 = {
+        name: 'basketball',
+        price: 1000,
+        
+    }
+    
+    // console.log(product1);
+    // product1.price = product1.price + 500;
+    // console.log(product1);
+
+
+    function comparePrice(product1, product2){
+       return (product1.price > product2.price) ? product1 : product2;
+    }
+    console.log(comparePrice(product1 , product2));
+    */
+    const product1 = {
+        name: 'basketball',
+        price:1000,
+        
+    };
+    const product2 = {
+        name: 'basketball',
+        price: 1000,
+        
+    }
+
+    function isSameProduct(product1, product2){
+        return (product1.name == product2.name && product1.price == product2.price) ?true : false;
+    }
+
+    console.log(isSameProduct(product1,product2));
+
+    console.log('raj'.repeat(4));
+    console.log('RAKESH'.toLowerCase());
+
+
+
+    </script> 
+</body>
+</html>
