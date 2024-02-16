@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-Calcuator </title>
+</head>
+
+<body>
+    <p class="js-cal-show"></p>
+    <p>Calcuator</p>
+    <p>
+        <button onclick="
+        updatecalculate('1');
+        ">1</button>
+        <button onclick="
+        updatecalculate('2');
+        ">2</button>
+        <button onclick="
+        updatecalculate('3');
+        ">3</button>
+    </p>
+    <p>
+        <button onclick="  
+        updatecalculate('4');
+        ">4</button>
+        <button onclick="
+        updatecalculate('5');
+        ">5</button>
+        <button onclick="
+        updatecalculate('6');
+        ">6</button>
+    </p>
+    <p>
+        <button onclick="
+        updatecalculate('7');
+        ">7</button>
+        <button onclick="
+        updatecalculate('8');
+        ">8</button>
+        <button onclick="
+        updatecalculate('9');
+        ">9</button>
+    </p>
+    <p>
+        <button onclick="
+        updatecalculate('0');
+        ">0</button>
+        <button onclick="
+        updatecalculate('+');
+        ">+</button>
+        <button onclick="
+        updatecalculate('-')
+        ">-</button>
+    </p>
+    <button onclick="
+    calculate();
+    ">=</button>
+    <button onclick="
+    localStorage.removeItem('sum');
+    localStorage.setItem('sum','')
+    document.querySelector('.js-cal-show')
+            .innerHTML = `0`;
+    ">Clear</button>
+
+    <script>
+
+        let sum = localStorage.getItem('sum') || '';
+        document.querySelector('.js-cal-show')
+            .innerHTML = `${sum}`;
+        // console.log(sum);
+        function updatecalculate(number) {
+
+            sum = localStorage.getItem('sum') + number;
+            // console.log(sum)
+            localStorage.setItem('sum', sum);
+            document.querySelector('.js-cal-show')
+            .innerHTML = `${sum}`;
+        }
+
+        function calculate() {
+            sum = eval(sum);
+            // console.log(sum);
+            localStorage.setItem('sum', sum);
+            document.querySelector('.js-cal-show')
+            .innerHTML = `${sum}`;
+        }
+    </script>
+</body>
+
+</html>
