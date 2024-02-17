@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Quantity</title>
+</head>
+
+<body>
+    <p>Cart</p>
+    <button onclick="
+        // console.log(`Cart Quantity : ${cartQuantity}`);
+        // showCart();
+    ">show Quantity</button>
+    <button onclick="
+    addToCart(1);
+    ">Add to cart</button>
+    <button onclick="
+    // cartQuantity += 2;
+    addToCart(2);
+    console.log(`Cart Quantity : ${cartQuantity}`);
+    ">+2</button>
+    <button onclick="
+    addToCart(3);
+    // cartQuantity += 3;
+    console.log(`Cart Quantity : ${cartQuantity}`);
+    ">+3</button>
+    <button onclick="
+   
+   cartQuantity = 0;
+    localStorage.removeItem('cartQuantity');
+    
+    document.querySelector('.js-quantity').innerHTML = `Cart Quantity : ${cartQuantity}`;
+    ">Reset Cart</button>
+    <p class="js-quantity"></p>
+
+    <script>
+        let cartQuantity = Number(localStorage.getItem('cartQuantity')) || 0;
+
+       document.querySelector('.js-quantity').innerHTML = `Cart Quantity : ${cartQuantity}`;
+
+        function addToCart(add){
+            
+
+            cartQuantity += add;
+            document.querySelector('.js-quantity').innerHTML = `Cart Quantity : ${cartQuantity}`;
+            const quantity = "" + cartQuantity;
+            localStorage.setItem('cartQuantity', quantity)
+        }
+
+        
+        
+    </script>
+
+</body>
+
+</html>
