@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>
+        hello
+    </button>
+    <button class="js-btn">
+        world
+    </button>
+
+    <script>
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('button')
+         .innerHTML = 'ok boss';
+
+        const btnElemelent = document.querySelector('.js-btn');
+        console.log(btnElemelent);
+        /* 
+        console.log(document.title);
+        console.log(document.body);
+        console.log(typeof document.body);
+        document.body.innerHTML = '<button>This </button>';
+        */
+
+        /*
+        document.body.innerHTML = 'hello';
+        document.title = 'good job';
+        */
+    </script>
+
+</body>
+</html>
