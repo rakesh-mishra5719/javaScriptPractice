@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10i-Calcuator </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+
+        <p class="js-cal-show"></p>
+        
+        <p>
+            <button onclick="
+        updatecalculate('1');
+        " class="numbers-btn">1</button>
+            <button onclick="
+        updatecalculate('2');
+        " class="numbers-btn">2</button>
+            <button onclick="
+        updatecalculate('3');
+        " class="numbers-btn">3</button>
+        <button onclick="
+        updatecalculate('+');
+        " class="operator-btn">+</button>
+        </p>
+        <p>
+            <button onclick="  
+        updatecalculate('4');
+        " class="numbers-btn">4</button>
+            <button onclick="
+        updatecalculate('5');
+        " class="numbers-btn">5</button>
+            <button onclick="
+        updatecalculate('6');
+        " class="numbers-btn">6</button>
+        <button onclick="
+        updatecalculate('-')
+        "class="operator-btn">-</button>
+        </p>
+        <p>
+            <button onclick="
+        updatecalculate('7');
+        " class="numbers-btn">7</button>
+            <button onclick="
+        updatecalculate('8');
+        " class="numbers-btn">8</button>
+            <button onclick="
+        updatecalculate('9');
+        " class="numbers-btn">9</button>
+        <button onclick="
+        updatecalculate('*')
+        "class="operator-btn">*</button>
+        </p>
+        <p>
+            <button onclick="
+        updatecalculate('0');
+        " class="numbers-btn">0</button>
+            <button onclick="
+            updatecalculate('.')
+            "class="numbers-btn">.</button>
+            <button onclick="
+            calculate();
+            " class="numbers-btn">=</button>
+            <button onclick="
+            updatecalculate('/')
+            "class="operator-btn">/</button>
+        </p>
+        
+        <button onclick="
+    localStorage.removeItem('sum');
+    localStorage.setItem('sum','')
+    document.querySelector('.js-cal-show')
+            .innerHTML = `0`;
+    " class="numbers-btn clear-btn">Clear</button>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial;
+}
+
+.container {
+    margin-left: 8px;
+}
+
+.js-cal-show {
+    font-size: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.numbers-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    color: white;
+    border: none;
+    margin-right: 5px;
+    margin-bottom: 16px;
+    background-color: rgb(51,51,51);
+    border-radius: 50%;
+}
+.operator-btn{
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    color: white;
+    border: none;
+    padding: 1px 6px;
+    background-color: orange;
+    border-radius: 60px;
+}
+.clear-btn{
+    font-size: 17px;
+}
