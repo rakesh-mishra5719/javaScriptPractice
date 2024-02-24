@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 W</title>
+</head>
+<body>
+    <script>
+        const array = ['raj','shiv','rohit','raj','shiv','om','r'];
+        const resArray = [];
+        for(let i = 0;i< array.length;i++){
+            if(array[i] != null){
+                resArray.push(array[i])
+                for(let j = i + 1;j<array.length;j++){
+                    if(array[i] === array[j]){
+                        array[j] = null;
+                    }
+                }
+            }
+        }
+
+        for(let i = 0;i<resArray.length;i++){
+            console.log(resArray[i]);
+        }
+    </script>
+</body>
+</html>
