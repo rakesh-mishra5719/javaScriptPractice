@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Guess the side of coin</p>
+    <button onclick="
+        
+        let number = Math.random();
+        let side ='';
+
+        if(number > 0 && number < 0.5){
+            side = 'Heads';
+        }else if(number >= 0.5 && number < 1){
+            side = 'Tails';
+        }
+        side === 'Heads'? alert('You Win'):alert('You Lose');
+       
+        
+
+        "> Heads </button>
+    <button onclick="
+
+
+        let number = Math.random();
+        let side ='';
+
+        if(number > 0 && number < 0.5){
+            side = 'Heads';
+        }else if(number >= 0.5 && number < 1){
+            side = 'Tails';
+        }
+        side === 'Heads'? alert('You Lose'):alert('You Win');
+    "> Tails </button>
+</body>
+</html>
