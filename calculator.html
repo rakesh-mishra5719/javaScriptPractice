@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcuator </title>
+</head>
+
+<body>
+    <p>Calcuator</p>
+    <p class="js-cal"></p>
+    <p>
+        <button onclick="
+        updatecalculate('1');
+        ">1</button>
+        <button onclick="
+        updatecalculate('2');
+        ">2</button>
+        <button onclick="
+        updatecalculate('3');
+        ">3</button>
+    </p>
+    <p>
+        <button onclick="  
+        updatecalculate('4');
+        ">4</button>
+        <button onclick="
+        updatecalculate('5');
+        ">5</button>
+        <button onclick="
+        updatecalculate('6');
+        ">6</button>
+    </p>
+    <p>
+        <button onclick="
+        updatecalculate('7');
+        ">7</button>
+        <button onclick="
+        updatecalculate('8');
+        ">8</button>
+        <button onclick="
+        updatecalculate('9');
+        ">9</button>
+    </p>
+    <p>
+        <button onclick="
+        updatecalculate('0');
+        ">0</button>
+        <button onclick="
+        updatecalculate('+');
+        ">+</button>
+        <button onclick="
+        updatecalculate('-')
+        ">-</button>
+    </p>
+    <button onclick="
+    calculate();
+    ">=</button>
+
+    <script>
+        let calculation = '';
+
+        function updatecalculate(number) {
+            calculation = calculation + number;
+            console.log(calculation);
+        }
+
+        function calculate() {
+            calculation = eval(calculation);
+            console.log(calculation);
+        }
+    </script>
+</body>
+
+</html>
