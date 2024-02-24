@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 e</title>
+</head>
+
+<body>
+
+    <button onclick="
+        added();
+        " class="js-add-btn">
+        Add to cart
+    </button>
+    <p class="js-added-message">
+
+    </p>
+    <!--
+    <button onclick="
+        document.querySelector('.js-btn-click').innerHTML = 'loading...';
+        setTimmer();
+    " class="js-btn-click">
+        start
+    </button>
+-->
+    <script>
+        function added() {
+            document.querySelector('.js-added-message')
+                .innerHTML = 'Added';
+            let intervalId =  setInterval(function () {
+
+                document.querySelector('.js-added-message')
+                    .innerHTML = '';
+                    clearInterval(intervalId);
+            }, 2000)
+        }
+
+
+        /*
+        const add = function(){
+            console.log(2+3 + "=");
+        }
+      for(let i = 1; i<= 2;i++) add();
+
+      function runTwice(fun){
+        fun();
+        fun();
+      }
+      runTwice(add);
+      */
+
+        /*
+          function setTimmer() {
+              setInterval(function timeGap() {
+  
+                  document.querySelector('.js-btn-click')
+                      .innerHTML = 'finished';
+              }, 1000);
+          }
+  */
+
+
+    </script>
+</body>
+
+</html>
